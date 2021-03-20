@@ -73,13 +73,13 @@ public String largestLoanCountry(){
   //create int 
   int index = 0;
   //create double
-  double largest = 0;
+  double large = 0;
   //for loop
   for(int x = 0; x < data.size(); x++){
     //if value at x is greater than double
-    if(data.get(x).getLoanAmount() > largest){
+    if(data.get(x).getLoanAmount() > large){
       //set value at x for double
-      largest = data.get(x).getLoanAmount();
+      large = data.get(x).getLoanAmount();
       //set int at x
       index = x;
     }
@@ -93,16 +93,16 @@ public String largestLoanCountry(){
 }
 
 public String smallestLoanCountry(){
-  //create int variable index
+  //create int
   int index = 0;
-  //create int variable smallest
-  double smallest = data.get(0).getLoanAmount();
+  //create double
+  double small = data.get(0).getLoanAmount();
   //for loop
   for(int x = 0; x < data.size(); x++){
     //if value at x is lesser than smallest
-    if(data.get(x).getLoanAmount() < smallest){
+    if(data.get(x).getLoanAmount() < small){
       //set value at x for smallest
-      smallest = data.get(x).getLoanAmount();
+      small = data.get(x).getLoanAmount();
       //set index at x
       index = x;
     }
@@ -116,11 +116,11 @@ public String smallestLoanCountry(){
 }
 
 public double avgDaysToFund(){
-  //create double total
+  //create double 
   double total = 0;
   //for each loop 
   for(Loan x: data){
-    //add days to total
+    //add days
     total = total + x.getDaysToFund();
   }
 
@@ -129,24 +129,18 @@ public double avgDaysToFund(){
 }
 
 public double largestLoanKenya(){
-  //create double largest
-  double largest = 0;
-
-  //for each loop 
+  double large = 0;
   for(Loan x: data){
-    //if country at x is Kenya
     if(x.getCountry().equals("Kenya")){
-      //if loan at x is larger than largest
-      if(x.getLoanAmount() > largest){
-        //set largest to loan
-        largest = x.getLoanAmount();
+      if(x.getLoanAmount() > large){
+        large = x.getLoanAmount();
       }
 
     }
   }
 
   //return largest
-  return largest;
+  return large;
 }
 
 public double avgLoanPhilippines(){

@@ -180,4 +180,6 @@ public double variance(){
   public double standardDeviation(){
     return Math.sqrt(this.variance());
   }
+
+  //empirical rule not required. 
 }
